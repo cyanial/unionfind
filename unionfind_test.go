@@ -10,3 +10,11 @@ func TestUnionFind(t *testing.T) {
 		t.Errorf("Union failed")
 	}
 }
+
+func TestConnected(t *testing.T) {
+	u := New(5)
+	u.Union(3, 4)
+	if !u.Connected(3, 4) {
+		t.Errorf("Not connected")
+	}
+}
